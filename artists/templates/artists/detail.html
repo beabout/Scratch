@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<h1>{{ artist.name }}</h1>
+<h3>Albums</h3>
+{% for album in albums %}
+  <a href="{{ album.id }}">
+    <img class="square" src="{{ album.cover_url }}"></img>
+  </a>
+{% endfor %}

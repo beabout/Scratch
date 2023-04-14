@@ -1,3 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
+class Review(models.Model):
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  album = models.ForeignKey('albums.Album', on_delete=models.CASCADE)
+  created_at = models.DateTimeField()
+  
+  def sections(self):
+    return Section.objects.filter(review_id=self.id).order_by('position').values()
+
+# Reviews have sections, a section could be text, an image or a sound bite
+class Section(models.Model):
+  position = models.IntegerField()
+  text = models.CharField(max_length=1080)
+  review = models.ForeignKey(Review, on_delete=models.CASCADE)

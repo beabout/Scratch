@@ -1,0 +1,9 @@
+
+# ignore all __pycache__
+albums/__pycache__/*
+albums/migrations/__pycache__/*
+artists/__pycache__/*
+artists/migrations/__pycache__/*
+reviews/__pycache__/*
+reviews/migrations/__pycache__/*
+scratch/__pycache__/*

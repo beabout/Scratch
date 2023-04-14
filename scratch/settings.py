@@ -34,6 +34,9 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'albums.apps.AlbumsConfig',
+    'artists.apps.ArtistsConfig',
+    'reviews.apps.ReviewsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,10 +57,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'scratch.urls'
 
+LOGIN_REDIRECT_URL = "/"
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ os.path.join(BASE_DIR, 'reviews/templates') ],
+        'DIRS': [ 
+          os.path.join(BASE_DIR, 'reviews/templates'),
+          os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,7 +129,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "reviews/static"),
+    os.path.join(BASE_DIR, "scratch/static"),
 ]
 
 # Default primary key field type

@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<h1>Albums</h1>
+<ul>
+  {% for album in albums %}
+    <li>
+      <a href="{{ album.id }}">{{ album }}</a>
+    </li>
+  {% endfor %}
+</ul>

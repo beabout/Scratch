@@ -1,8 +1,11 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'reviews/style.css' %}">
+<link rel="stylesheet" href="{% static 'style.css' %}">
 
-<div class="container">
-  <img src={{url}} style="height:300px; width:300px;"></img>
-  <h3>Some Album</h3>
-  <p>OK, so I liked it</p>
+<div>
+  <h3>Reviews</h3>
+  <ul>
+    {% for review in reviews %}
+      <li>{{ review.album }}</li>
+    {% endfor %}
+  </ul>
 </div>
