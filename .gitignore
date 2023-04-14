@@ -7,3 +7,6 @@ artists/migrations/__pycache__/*
 reviews/__pycache__/*
 reviews/migrations/__pycache__/*
 scratch/__pycache__/*
+
+# ignore db
+db.*
