@@ -8,6 +8,11 @@
 	src: url('./Martel-Regular.ttf');
 }
 
+@font-face {
+  font-family: "Cozette";
+  src: url('./CozetteVector.ttf');
+}
+
 /* COLORS
  * Vista blue - #8EA4D2
  * Glaucous blue - #6279B8
@@ -18,7 +23,7 @@
 
 /* PROJECT WIDE */
 body {
-  font-family: "Martel";
+  font-family: 'Cozette';
   margin: 2rem 5rem 2rem 5rem;
 }
 
@@ -30,7 +35,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Nintendo";
+  font-family: "Cozette";
+  color: #6279B8;
 }
 
 p {
@@ -41,7 +47,7 @@ p {
   text-align: center;
   border-radius: 0.25rem;
   padding: 1rem;
-  border: 2px solid black;
+  border: 2px solid #6279B8;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: fit-content;
 }
@@ -66,7 +72,6 @@ p {
 
 /* REVIEWS */
 .rbody {
-	font-family: "Martel";
 	padding: 0rem 5rem 0rem 5rem;
 	text-align: left;
 	margin-top: 4rem;
@@ -76,7 +81,7 @@ p {
 .soundbite {
 	border-radius: 0.25rem;
 	padding: 1rem;
-	border: 2px solid black;
+	border: 2px solid #6279B8;
 }
 
 .square {
