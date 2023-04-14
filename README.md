@@ -17,4 +17,4 @@ Users can log into their Spotify accounts which will then provide us with access
 
 Reviews will be able to have sound snippets. 
 
-<img width="628" alt="image" src="https://user-images.githubusercontent.com/22066972/230824433-350512a3-9e79-4c1d-b614-2f6c81c1748d.png">
+![Screenshot 2023-04-11 at 9 40 49 AM](https://user-images.githubusercontent.com/22066972/231198766-a7670173-af1c-412c-a5a0-489f33d6dccd.png)
