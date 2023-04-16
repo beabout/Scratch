@@ -1,5 +1,7 @@
 
 # ignore all __pycache__
+accounts/__pycache__/*
+accounts/migrations/__pycache__/*
 albums/__pycache__/*
 albums/migrations/__pycache__/*
 artists/__pycache__/*

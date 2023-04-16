@@ -19,8 +19,6 @@ from django.urls import include, path
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    # templates/home.html
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
     # reviews/templates/reviews/
     path('reviews/', include("reviews.urls")),
     # albums/templates/albums/
@@ -28,5 +26,8 @@ urlpatterns = [
     # artists/templates/artists/
     path('artists/', include("artists.urls")),
     path('admin/', admin.site.urls),
+    path("accounts/", include("accounts.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
+    # templates/home.html
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]

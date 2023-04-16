@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Me{% endblock %}
+{% block content %}
+
+<h1>My Reviews</h1>
+<div>
+  <ul>
+
+    {% for review in reviews %}
+      <li>
+        <a href="reviews/{{ review.id }}">{{ review }}</a>
+      </li>
+    {% endfor %}
+
+  </ul>
+</div>
+
+{% endblock %}
