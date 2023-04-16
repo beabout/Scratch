@@ -1,10 +1,18 @@
-{% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+{% extends "base.html" %}
+{% block title %}Album{% endblock %}
+{% block content %}
 
-<img class="square" src="{{ album.cover_url }}"></img>
-<h1>{{ album.title }}</h1>
+<div class="center">
+  <img class="cover" src="{{ album.cover_url }}"></img>
+</div>
+<div class="center">
+  <h1>{{ album.title }}</h1>
+</div>
 <p> total tracks: {{ album.total_tracks }}</p>
 <h3>Artists</h3>
+
 {% for artist in artists %}
-  <a href="{{ artist }}">{{ artist }}</a>
+  <a href="/artists/{{ artist.id }}">{{ artist }}</a>
 {% endfor %}
+
+{% endblock %}

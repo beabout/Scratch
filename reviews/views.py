@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
-from . models import Review
+from . models import Review, Section
+from albums.models import Album
 
 def index(request):
     template = loader.get_template("reviews/index.html")
@@ -13,7 +14,10 @@ def index(request):
 
 def detail(request, review_id):
   template = loader.get_template("reviews/detail.html")
+  review = Review.objects.get(id=review_id)
   context = { 
-      "review": Review.objects.get(id=review_id),
+      "review": review,
+      "album": Album.objects.get(id=review.album_id),
+      "sections": Section.objects.filter(review_id=review_id),
   }
   return HttpResponse(template.render(context, request))
