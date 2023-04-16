@@ -1,19 +1,35 @@
 # Scratch
 A record review site (Letterbox but for albums)
 
-**run dev env**
+## Development
+
+Built in Django
+
+### Required pip packages
+
+- `django-extensions`
+- `spotipy`
+- `django`
+
+### Commands 
+
+start developemnt environment
+
 ```bash
 python manage.py runserver 0.0.0.0:8000
-```
-(without `0.0.0.0:8000`, we cannot access the dev environment from another PC on the network)
 
-## Data
+# '0.0.0.0:8000' is required for other systems on the same local network to access the project
+```
+
+## Project Features 
+
+### Data
 
 How will we obtain data to populate our database? From Spotify! 
 
 Users can log into their Spotify accounts which will then provide us with access to album data, which we'll use to build up the Scratch Database. 
 
-## Reviews
+### Reviews
 
 Reviews will be able to have sound snippets. 
 
