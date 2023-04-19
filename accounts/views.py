@@ -12,7 +12,7 @@ class SignUpView(generic.CreateView):
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
 
-def index(request):
+def me(request):
     template = loader.get_template("accounts/me.html")
     context = { 
         "me": request.user,
