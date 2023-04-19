@@ -10,7 +10,7 @@ class Review(models.Model):
     return Section.objects.filter(review_id=self.id).order_by('position').values()
 
   def __str__(self):
-    return f'({self.id}) {self.user} - {self.album}'
+    return f'{self.album} ({self.created_at.strftime("%m-%d-%Y")})'
 
 # Reviews have sections, a section could be text, an image or a sound bite
 class Section(models.Model):
