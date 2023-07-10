@@ -7,6 +7,9 @@
 </div>
 <div class="center">
   <h1>{{ album.title }}</h1>
+  <div id="actions">
+    <a class="btn" href="/reviews/new?album_id={{ album.id }}">add review</a>
+  </div>
 </div>
 <p> total tracks: {{ album.total_tracks }}</p>
 <h3>Artists</h3>

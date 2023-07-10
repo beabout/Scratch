@@ -6,13 +6,22 @@
   <img src={{album.cover_url}} style="height:300px; width:300px;"></img>
 </div>
 <div class="center">
-  <h2>{{album.title}}</h2>
+  <h2>{{review}}</h2>
 </div>
 <div class="rbody">
 
   {% for section in sections %}
     <p>{{section.text}}</p>
   {% endfor %}
+
+  <iframe style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/1TPLsNVlofwX1txcE9gZZF?utm_source=generator&theme=0"
+    width="100%"
+    height="152"
+    frameBorder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+  </iframe>
 
 </div>
 

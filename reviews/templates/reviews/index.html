@@ -4,13 +4,11 @@
 
 <div>
   <h3>Reviews</h3>
-  <ul>
 
-    {% for review in reviews %}
-      <li>{{ review.album }}</li>
-    {% endfor %}
+  {% for review in reviews %}
+    {{ review.album }}
+  {% endfor %}
 
-  </ul>
 </div>
 
 {% endblock %}

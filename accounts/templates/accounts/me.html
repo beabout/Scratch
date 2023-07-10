@@ -2,17 +2,15 @@
 {% block title %}Me{% endblock %}
 {% block content %}
 
-<h1>My Reviews</h1>
-<div>
-  <ul>
+<div id="myreviews">
+  <h1>My Reviews</h1>
 
-    {% for review in reviews %}
-      <li>
-        <a href="reviews/{{ review.id }}">{{ review }}</a>
-      </li>
-    {% endfor %}
+  {% for review in reviews %}
+    <a href="reviews/{{ review.id }}">
+      <img src={{review.album.cover_url}} style="height:200px; width:200px;"></img>
+    </a>
+  {% endfor %}
 
-  </ul>
 </div>
 
 {% endblock %}
