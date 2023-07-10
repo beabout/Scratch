@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}New Review{% endblock %}
+{% block content %}
+
+<div class="center">
+  <img class="cover" src="{{ album.cover_url }}"></img>
+</div>
+<div class="center">
+  <h1>Review for {{ album.title }}</h1>
+</div>
+<form action="/reviews/create" method="post">
+  <label for="text">Your Thoughts</label>
+  <br />
+  <textarea style="width:100%;" id="text" type="text" name="text" value="" ></textarea>
+  <div id="actions">
+    <input class="btn" type="submit" value="Create Review">
+  </div>
+</form>
+
+
+{% endblock %}
