@@ -37,9 +37,6 @@ main {
 
 .center {
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 h1,
@@ -54,6 +51,13 @@ p {
   line-height: 2;
 }
 
+textarea {
+  width: 100%;
+  border: 2px solid #49516F;
+  border-radius: 0.25rem;
+  height: 200px;
+}
+
 .jumbo {
   text-align: center;
   border-radius: 0.25rem;
@@ -61,6 +65,25 @@ p {
   border: 2px solid #6279B8;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: fit-content;
+}
+
+.btn {
+  text-decoration: none;
+  border: 2px solid #49516F;
+  background-color: #8EA4D2;
+  color: #49516F;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.btn:hover {
+  border-color: #8EA4D2;
+  background-color: #49516F;
+  color: #8EA4D2;
+}
+
+#actions {
+  margin-top: 1rem;
 }
 
 /* NAVIGATION */
