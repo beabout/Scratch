@@ -4,15 +4,19 @@
 import spotipy
 import json
 import os 
-from spotipy.oauth2 import SpotifyOAuth
+from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
 from albums.models import Album
 from artists.models import Artist
 
 CLIENT_ID="fed1c759d0d140f591fddf0ba2689b1b"
 APP_CLIENT_SECRET="f6f6949144314e42922272839a6370fb"
-APP_REDIRECT_URI="http://localhost:3000/discography"
+APP_REDIRECT_URI="http://localhost:8001/"
 
 def run(*args):
+  # Authentication - without user
+  client_credentials_manager = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=APP_CLIENT_SECRET)
+  sp = spotipy.Spotify(client_credentials_manager = client_credentials_manager)
+
   offset = 0
   sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=CLIENT_ID,
                                                   client_secret=APP_CLIENT_SECRET,
